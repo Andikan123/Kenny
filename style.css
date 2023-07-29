@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Nova+Square&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nova Square", cursive;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e0859);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todoapp {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+.todoapp img {
+  width: 50px;
+  height: 50px;
+  padding-left: 10px;
+}
+.todoapp h1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #c9cacc;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 17px;
+  font-size: 18px;
+}
+button {
+  border: none;
+  outline: none;
+  background: #ff5945;
+  padding: 16px 40px;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 18px;
+}
+ul li {
+  list-style: none;
+  margin: 20px;
+  font-size: 20px;
+  position: relative;
+  padding-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  /* border: 1px solid #222; */
+  background: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  left: 0;
+  /* border: 1px solid red; */
+  border-radius: 50%;
+}
+ul li.checked::before {
+  background-image: url(images/checked.png);
+}
+ul li.checked {
+  text-decoration: line-through;
+}
+ul li span {
+  /* font-size: 25px; */
+  /* margin-left: 200px; */
+  color: red;
+  border: 1px solid red;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+.date {
+  font-weight: 600;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
